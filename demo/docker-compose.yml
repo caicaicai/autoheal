@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+    hello:
+        restart: always
+        image: xiaocaicai/hello
+        healthcheck:
+          test: ["CMD-SHELL", "curl --fail 127.0.0.1:7000 || exit 1"]
+          interval: 5s
+          timeout: 10s
+          retries: 1
+          start_period: 40s  

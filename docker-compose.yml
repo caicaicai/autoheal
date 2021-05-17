@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  autoheal:
+    build: .
+    restart: always
+    image: xiaocaicai/autoheal
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
